@@ -38,7 +38,8 @@ for (var i = 0; i < planets.length; i++) {
 
         var userWeight = document.getElementById("user-weight").value; 
 var planetName = document.getElementById("planets").value; 
-var result = calculateWeight(userWeight,planetName);
+var result = calculateWeight(userWeight,planetName)
+displayResult(result);
     } 
 function displayMessage(){
   var love = document.getElementById("title");
@@ -49,8 +50,13 @@ function displayTitle(){
 }
 const button = document.getElementById("calculate-button");
 button.addEventListener("click", handleClickEvent);
+function displayResult(result) {
+  const outputNode = document.getElementById("output");
+  outputNode.textContent = result;
+}
 displayMessage();
 displayTitle();
+;
 
 
 
